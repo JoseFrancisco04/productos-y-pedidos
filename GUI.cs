@@ -94,7 +94,7 @@ namespace LoginCRUMAR
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            abrirFormHija(new Form1());
+            abrirFormHija(new inicio());
         }
     }
 }
