@@ -1,6 +1,6 @@
 ﻿namespace LoginCRUMAR
 {
-    partial class frm_Principal
+    partial class test
     {
         /// <summary>
         /// Required designer variable.
@@ -55,6 +55,8 @@
             this.tbIdUssE = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
+            this.rbActivoSA = new System.Windows.Forms.RadioButton();
             this.btnActuAct = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtUserAct = new System.Windows.Forms.TextBox();
@@ -68,8 +70,7 @@
             this.txtUssAct = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.rbActivoSA = new System.Windows.Forms.RadioButton();
-            this.label12 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.tbClientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbEmpresaWXDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbEmpresaWXDataSet)).BeginInit();
@@ -254,6 +255,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.tabPage1.Controls.Add(this.iconButton1);
             this.tabPage1.Controls.Add(this.btnConsultar);
             this.tabPage1.Controls.Add(this.dgvUsuarios);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -341,6 +343,29 @@
             this.tabPage4.Size = new System.Drawing.Size(572, 584);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Actualizar";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(256, 225);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(58, 20);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Activo";
+            // 
+            // rbActivoSA
+            // 
+            this.rbActivoSA.AutoSize = true;
+            this.rbActivoSA.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbActivoSA.ForeColor = System.Drawing.Color.Black;
+            this.rbActivoSA.Location = new System.Drawing.Point(291, 248);
+            this.rbActivoSA.Name = "rbActivoSA";
+            this.rbActivoSA.Size = new System.Drawing.Size(48, 24);
+            this.rbActivoSA.TabIndex = 30;
+            this.rbActivoSA.TabStop = true;
+            this.rbActivoSA.Text = "No";
+            this.rbActivoSA.UseVisualStyleBackColor = true;
             // 
             // btnActuAct
             // 
@@ -487,28 +512,18 @@
             this.label9.TabIndex = 20;
             this.label9.Text = "Apellidos";
             // 
-            // rbActivoSA
+            // iconButton1
             // 
-            this.rbActivoSA.AutoSize = true;
-            this.rbActivoSA.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbActivoSA.ForeColor = System.Drawing.Color.Black;
-            this.rbActivoSA.Location = new System.Drawing.Point(291, 248);
-            this.rbActivoSA.Name = "rbActivoSA";
-            this.rbActivoSA.Size = new System.Drawing.Size(48, 24);
-            this.rbActivoSA.TabIndex = 30;
-            this.rbActivoSA.TabStop = true;
-            this.rbActivoSA.Text = "No";
-            this.rbActivoSA.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(256, 225);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 20);
-            this.label12.TabIndex = 31;
-            this.label12.Text = "Activo";
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(294, 217);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(75, 23);
+            this.iconButton1.TabIndex = 3;
+            this.iconButton1.Text = "Editar";
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // frm_Principal
             // 
@@ -579,5 +594,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RadioButton rbActivoSA;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

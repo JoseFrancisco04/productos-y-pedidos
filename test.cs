@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace LoginCRUMAR
 {
-    public partial class frm_Principal : Form
+    public partial class test : Form
     {
         Conexion coBD = new Conexion();
-        public frm_Principal()
+        public test()
         {
             InitializeComponent();
         }
@@ -182,6 +182,25 @@ namespace LoginCRUMAR
             catch (Exception ex)
             {
                 MessageBox.Show("Error de SQL: " + ex.Message);
+            }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            gestionEmpleados gu = new gestionEmpleados();
+            if (dgvUsuarios.SelectedRows.Count > 0)
+            {
+                gu.tbId.Text = dgvUsuarios.CurrentRow.Cells[0].Value.ToString();
+                gu.tbUsuario.Text = dgvUsuarios.CurrentRow.Cells[1].Value.ToString();
+                gu.tbContra.Text = dgvUsuarios.CurrentRow.Cells[2].Value.ToString();
+                gu.tbNombre.Text = dgvUsuarios.CurrentRow.Cells[3].Value.ToString();
+                gu.tbApellido.Text = dgvUsuarios.CurrentRow.Cells[4].Value.ToString();
+                gu.rbActivo.Checked = bool.Parse(dgvUsuarios.CurrentRow.Cells[5].Value.ToString());
+                gu.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Se debe seleccionar una fila");
             }
         }
     }

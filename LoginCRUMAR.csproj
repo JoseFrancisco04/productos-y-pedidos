@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +50,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
@@ -57,17 +64,41 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbEmpresaWXDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="EditarInventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="EditarInventario.Designer.cs">
+      <DependentUpon>EditarInventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Principal.cs">
+    <Compile Include="gestionVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Principal.Designer.cs">
-      <DependentUpon>frm_Principal.cs</DependentUpon>
+    <Compile Include="gestionVentas.Designer.cs">
+      <DependentUpon>gestionVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gestionInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gestionInventario.Designer.cs">
+      <DependentUpon>gestionInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gestionEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gestionEmpleados.Designer.cs">
+      <DependentUpon>gestionEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI.cs">
       <SubType>Form</SubType>
@@ -83,11 +114,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="EditarInventario.resx">
+      <DependentUpon>EditarInventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Principal.resx">
-      <DependentUpon>frm_Principal.cs</DependentUpon>
+    <EmbeddedResource Include="gestionVentas.resx">
+      <DependentUpon>gestionVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gestionInventario.resx">
+      <DependentUpon>gestionInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gestionEmpleados.resx">
+      <DependentUpon>gestionEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.resx">
       <DependentUpon>GUI.cs</DependentUpon>
@@ -127,6 +170,7 @@
     <None Include="dbEmpresaWXDataSet1.xss">
       <DependentUpon>dbEmpresaWXDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

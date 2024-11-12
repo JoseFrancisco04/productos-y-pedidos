@@ -34,6 +34,7 @@
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnMax = new System.Windows.Forms.PictureBox();
             this.menuVertical = new System.Windows.Forms.Panel();
+            this.btnUser = new FontAwesome.Sharp.IconButton();
             this.subMenuEliminar = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnDeleteData = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnInventario = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.PictureBox();
@@ -123,11 +124,12 @@
             // menuVertical
             // 
             this.menuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.menuVertical.Controls.Add(this.btnUser);
             this.menuVertical.Controls.Add(this.subMenuEliminar);
             this.menuVertical.Controls.Add(this.panel3);
             this.menuVertical.Controls.Add(this.btnDelete);
             this.menuVertical.Controls.Add(this.panel2);
-            this.menuVertical.Controls.Add(this.button1);
+            this.menuVertical.Controls.Add(this.btnInventario);
             this.menuVertical.Controls.Add(this.panel1);
             this.menuVertical.Controls.Add(this.btnInsert);
             this.menuVertical.Controls.Add(this.btnInicio);
@@ -137,15 +139,34 @@
             this.menuVertical.Size = new System.Drawing.Size(220, 610);
             this.menuVertical.TabIndex = 1;
             // 
+            // btnUser
+            // 
+            this.btnUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnUser.FlatAppearance.BorderSize = 0;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
+            this.btnUser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUser.IconSize = 45;
+            this.btnUser.Location = new System.Drawing.Point(12, 552);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(48, 46);
+            this.btnUser.TabIndex = 8;
+            this.btnUser.UseVisualStyleBackColor = false;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            // 
             // subMenuEliminar
             // 
             this.subMenuEliminar.Controls.Add(this.panel6);
             this.subMenuEliminar.Controls.Add(this.btnDeleteData);
             this.subMenuEliminar.Controls.Add(this.panel5);
             this.subMenuEliminar.Controls.Add(this.btnDeleteUs);
-            this.subMenuEliminar.Location = new System.Drawing.Point(57, 235);
+            this.subMenuEliminar.Location = new System.Drawing.Point(57, 232);
             this.subMenuEliminar.Name = "subMenuEliminar";
-            this.subMenuEliminar.Size = new System.Drawing.Size(163, 69);
+            this.subMenuEliminar.Size = new System.Drawing.Size(163, 64);
             this.subMenuEliminar.TabIndex = 7;
             this.subMenuEliminar.Visible = false;
             // 
@@ -160,6 +181,7 @@
             // btnDeleteData
             // 
             this.btnDeleteData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnDeleteData.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteData.FlatAppearance.BorderSize = 0;
             this.btnDeleteData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDeleteData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -185,6 +207,7 @@
             // btnDeleteUs
             // 
             this.btnDeleteUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnDeleteUs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteUs.FlatAppearance.BorderSize = 0;
             this.btnDeleteUs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDeleteUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -202,7 +225,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel3.Location = new System.Drawing.Point(0, 197);
+            this.panel3.Location = new System.Drawing.Point(0, 194);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(5, 32);
             this.panel3.TabIndex = 6;
@@ -210,43 +233,47 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(3, 197);
+            this.btnDelete.Location = new System.Drawing.Point(3, 194);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(217, 32);
             this.btnDelete.TabIndex = 5;
-            this.btnDelete.Text = "Eliminar";
+            this.btnDelete.Text = "Ventas";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel2.Location = new System.Drawing.Point(0, 159);
+            this.panel2.Location = new System.Drawing.Point(0, 156);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(5, 32);
             this.panel2.TabIndex = 4;
             // 
-            // button1
+            // btnInventario
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 159);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 32);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Venta";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnInventario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnInventario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInventario.FlatAppearance.BorderSize = 0;
+            this.btnInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventario.ForeColor = System.Drawing.Color.White;
+            this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventario.Location = new System.Drawing.Point(3, 156);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Size = new System.Drawing.Size(217, 32);
+            this.btnInventario.TabIndex = 3;
+            this.btnInventario.Text = "Inventario";
+            this.btnInventario.UseVisualStyleBackColor = false;
+            this.btnInventario.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -270,7 +297,7 @@
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(217, 32);
             this.btnInsert.TabIndex = 1;
-            this.btnInsert.Text = "Insertar";
+            this.btnInsert.Text = "Empleados";
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
@@ -280,7 +307,7 @@
             this.btnInicio.Image = global::LoginCRUMAR.Properties.Resources.LogoCRUMAR;
             this.btnInicio.Location = new System.Drawing.Point(12, 6);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(202, 90);
+            this.btnInicio.Size = new System.Drawing.Size(208, 90);
             this.btnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnInicio.TabIndex = 0;
             this.btnInicio.TabStop = false;
@@ -333,12 +360,13 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel subMenuEliminar;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnDeleteUs;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnDeleteData;
+        private FontAwesome.Sharp.IconButton btnUser;
     }
 }

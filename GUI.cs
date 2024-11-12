@@ -60,7 +60,14 @@ namespace LoginCRUMAR
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            subMenuEliminar.Visible = true;
+            if (subMenuEliminar.Visible == false)
+            {
+                subMenuEliminar.Visible = true;
+            }
+            else
+            {
+                subMenuEliminar.Visible = false;
+            }
         }
 
         private void btnDeleteUs_Click(object sender, EventArgs e)
@@ -89,12 +96,22 @@ namespace LoginCRUMAR
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            abrirFormHija(new frm_Principal());
+            abrirFormHija(new test());
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
             abrirFormHija(new inicio());
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Ajustes de usuario.");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            abrirFormHija(new EditarInventario());
         }
     }
 }
