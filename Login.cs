@@ -28,22 +28,17 @@ namespace LoginCRUMAR
 
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        Conexion coBD = new Conexion();
+        ConexionProductos coBD = new ConexionProductos();
 
         private void button1_Click(object sender, EventArgs e)
         {
 
             try
             {
-                bool res = coBD.AutenticarUsuarios(txtUss.Text, txtPass.Text);
+                bool res = coBD.AutenticarUsuarioP(txtUss.Text, txtPass.Text);
                 if (res)
                 {
-                    GUI miform2 = new GUI();
+                    GUIProductos miform2 = new GUIProductos();
                     this.Hide();
                     miform2.ShowDialog();
 
@@ -69,7 +64,7 @@ namespace LoginCRUMAR
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dbEmpresaWXDataSet1.tbUsuarios' Puede moverla o quitarla según sea necesario.
-            this.tbUsuariosTableAdapter.Fill(this.dbEmpresaWXDataSet1.tbUsuarios);
+            //this.tbUsuariosTableAdapter.Fill(this.dbEmpresaWXDataSet1.tbUsuarios);
 
         }
 
@@ -143,6 +138,11 @@ namespace LoginCRUMAR
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

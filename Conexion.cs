@@ -11,7 +11,7 @@ namespace LoginCRUMAR
         {
         }
 
-        static string cadena = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=dbEmpresaWX;Integrated Security=True";
+        static string cadena = @"Data Source=localhost\SQLExpress;Initial Catalog=db_CRUMARP;Integrated Security=True";
 
         public SqlConnection conexion = new SqlConnection(cadena);
 
@@ -88,7 +88,7 @@ namespace LoginCRUMAR
             return false;
         }
 
-        public bool agregarUsuario(int id, string usuario, string contra, string nombre, string apellido, bool activo)
+        public bool agregarProducto(int codigoBarras, string nombre, string marca, string iva, string existencias, int precioC, int precioV, string fechaCad)
         {
             try
             {
@@ -96,19 +96,21 @@ namespace LoginCRUMAR
                 //sentencia = "insert into usuariosAdmin.tbUsuarios values(@id, @usuario, @contra, @nombre, @apellido, @activo);";
                 //sentencia = "exec spInsertarUsuario2 @id, @usuario, @contra, @nombre, @apellido, @activo;";
                 comando.Connection = conexion;
-                comando.CommandText = "spInsertarUsuario";
+                comando.CommandText = "spInsertarProducto";
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //comando = new SqlCommand(sentencia, conexion);
 
-                comando.Parameters.AddWithValue("@id", id);
-                comando.Parameters.AddWithValue("@usuario", usuario);
-                comando.Parameters.AddWithValue("@contra", contra);
+                comando.Parameters.AddWithValue("@codigoBarras", codigoBarras);
                 comando.Parameters.AddWithValue("@nombre", nombre);
-                comando.Parameters.AddWithValue("@apellido", apellido);
-                comando.Parameters.AddWithValue("@activo", activo);
+                comando.Parameters.AddWithValue("@marca", marca);
+                comando.Parameters.AddWithValue("@iva", iva);
+                comando.Parameters.AddWithValue("@existencia", existencias);
+                comando.Parameters.AddWithValue("@precioCompra", precioC);
+                comando.Parameters.AddWithValue("@precioVenta", precioV);
+                comando.Parameters.AddWithValue("@fechaCaducidad", fechaCad);
 
-                conexion.Open();
+                //conexion.Open();
 
                 if (comando.ExecuteNonQuery() != -1)
                 {

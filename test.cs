@@ -46,27 +46,27 @@ namespace LoginCRUMAR
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
-            {
-                bool res = coBD.agregarUsuario(int.Parse(txtId.Text),
-                    tbUser.Text,
-                    tbPass.Text,
-                    tbName.Text,
-                    tbLastName.Text,
-                    rbActivo.Checked);
-                if (res)
-                {
-                    MessageBox.Show("Usuario Agregado");
-                }
-                else
-                {
-                    MessageBox.Show("Fallo la operacion");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error de SQL: " + ex.Message);
-            }
+            //try
+            //{
+            //    bool res = coBD.agregarUsuario(int.Parse(txtId.Text),
+            //        tbUser.Text,
+            //        tbPass.Text,
+            //        tbName.Text,
+            //        tbLastName.Text,
+            //        rbActivo.Checked);
+            //    if (res)
+            //    {
+            //        MessageBox.Show("Usuario Agregado");
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Fallo la operacion");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error de SQL: " + ex.Message);
+            //}
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

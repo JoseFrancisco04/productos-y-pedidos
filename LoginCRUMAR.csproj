@@ -33,13 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,7 +58,20 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BucarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BucarPedido.Designer.cs">
+      <DependentUpon>BucarPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BudquedaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BudquedaProduto.Designer.cs">
+      <DependentUpon>BudquedaProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conexion.cs" />
+    <Compile Include="ConexionProductos.cs" />
     <Compile Include="dbEmpresaWXDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -64,11 +82,40 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbEmpresaWXDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="db_CRUMARPDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_CRUMARPDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EditarInventario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditarInventario.Designer.cs">
       <DependentUpon>EditarInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarPedidocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarPedidocs.Designer.cs">
+      <DependentUpon>EditarPedidocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarProducto.Designer.cs">
+      <DependentUpon>EditarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarPedido.Designer.cs">
+      <DependentUpon>EliminarPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarProducto.Designer.cs">
+      <DependentUpon>EliminarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="gestionVentas.cs">
       <SubType>Form</SubType>
@@ -82,6 +129,20 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="OpcionCombo.cs" />
+    <Compile Include="AgregarPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarPedidos.Designer.cs">
+      <DependentUpon>AgregarPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarProductos.Designer.cs">
+      <DependentUpon>AgregarProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SoloNumyFech.cs" />
     <Compile Include="test.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,11 +161,11 @@
     <Compile Include="gestionEmpleados.Designer.cs">
       <DependentUpon>gestionEmpleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI.cs">
+    <Compile Include="GUIProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI.Designer.cs">
-      <DependentUpon>GUI.cs</DependentUpon>
+    <Compile Include="GUIProductos.Designer.cs">
+      <DependentUpon>GUIProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="inicio.cs">
       <SubType>Form</SubType>
@@ -114,14 +175,38 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BucarPedido.resx">
+      <DependentUpon>BucarPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BudquedaProduto.resx">
+      <DependentUpon>BudquedaProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditarInventario.resx">
       <DependentUpon>EditarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarPedidocs.resx">
+      <DependentUpon>EditarPedidocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarProducto.resx">
+      <DependentUpon>EditarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarPedido.resx">
+      <DependentUpon>EliminarPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarProducto.resx">
+      <DependentUpon>EliminarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gestionVentas.resx">
       <DependentUpon>gestionVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarPedidos.resx">
+      <DependentUpon>AgregarPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarProductos.resx">
+      <DependentUpon>AgregarProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.cs</DependentUpon>
@@ -132,8 +217,8 @@
     <EmbeddedResource Include="gestionEmpleados.resx">
       <DependentUpon>gestionEmpleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI.resx">
-      <DependentUpon>GUI.cs</DependentUpon>
+    <EmbeddedResource Include="GUIProductos.resx">
+      <DependentUpon>GUIProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inicio.resx">
       <DependentUpon>inicio.cs</DependentUpon>
@@ -169,6 +254,17 @@
     </None>
     <None Include="dbEmpresaWXDataSet1.xss">
       <DependentUpon>dbEmpresaWXDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="db_CRUMARPDataSet.xsc">
+      <DependentUpon>db_CRUMARPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_CRUMARPDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_CRUMARPDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_CRUMARPDataSet.xss">
+      <DependentUpon>db_CRUMARPDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
