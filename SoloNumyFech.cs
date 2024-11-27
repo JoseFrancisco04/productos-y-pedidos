@@ -38,5 +38,14 @@ namespace LoginCRUMAR
 
             }
         }
+        public static void SoloLetras(object sender, KeyPressEventArgs e)
+        {
+            // Verificar si el carácter presionado es una letra o un control (como backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                // Cancelar el evento de pulsación de tecla
+                e.Handled = true;
+            }
+        }
     }
 }
