@@ -39,16 +39,15 @@
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrePro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnComprobante = new FontAwesome.Sharp.IconButton();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.btLimpiar2 = new FontAwesome.Sharp.IconButton();
-            this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.cboBusqueda = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblBuscarpor = new System.Windows.Forms.Label();
             this.Titulo = new System.Windows.Forms.Label();
-            this.btnComprobante = new FontAwesome.Sharp.IconButton();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.pPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -57,12 +56,11 @@
             // pPrincipal
             // 
             this.pPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.pPrincipal.Controls.Add(this.dgvPedidos);
             this.pPrincipal.Controls.Add(this.btnComprobante);
             this.pPrincipal.Controls.Add(this.panel10);
-            this.pPrincipal.Controls.Add(this.dgvPedidos);
             this.pPrincipal.Controls.Add(this.pictureBox9);
             this.pPrincipal.Controls.Add(this.btLimpiar2);
-            this.pPrincipal.Controls.Add(this.btnBuscar);
             this.pPrincipal.Controls.Add(this.txtBuscar);
             this.pPrincipal.Controls.Add(this.cboBusqueda);
             this.pPrincipal.Controls.Add(this.label2);
@@ -86,7 +84,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -103,20 +101,20 @@
             this.dgvPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvPedidos.EnableHeadersVisualStyles = false;
             this.dgvPedidos.GridColor = System.Drawing.Color.Gray;
-            this.dgvPedidos.Location = new System.Drawing.Point(3, 210);
+            this.dgvPedidos.Location = new System.Drawing.Point(3, 296);
             this.dgvPedidos.Name = "dgvPedidos";
             this.dgvPedidos.RowHeadersVisible = false;
             this.dgvPedidos.RowHeadersWidth = 62;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvPedidos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPedidos.RowTemplate.Height = 28;
             this.dgvPedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPedidos.Size = new System.Drawing.Size(1227, 634);
-            this.dgvPedidos.TabIndex = 80;
+            this.dgvPedidos.Size = new System.Drawing.Size(1227, 539);
+            this.dgvPedidos.TabIndex = 102;
             // 
             // idProductoprove
             // 
@@ -160,6 +158,39 @@
             this.nombrePro.MinimumWidth = 8;
             this.nombrePro.Name = "nombrePro";
             // 
+            // btnComprobante
+            // 
+            this.btnComprobante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnComprobante.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnComprobante.FlatAppearance.BorderSize = 0;
+            this.btnComprobante.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnComprobante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnComprobante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComprobante.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComprobante.ForeColor = System.Drawing.Color.LightGray;
+            this.btnComprobante.IconChar = FontAwesome.Sharp.IconChar.Download;
+            this.btnComprobante.IconColor = System.Drawing.Color.White;
+            this.btnComprobante.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnComprobante.IconSize = 30;
+            this.btnComprobante.Location = new System.Drawing.Point(920, 45);
+            this.btnComprobante.Name = "btnComprobante";
+            this.btnComprobante.Size = new System.Drawing.Size(250, 49);
+            this.btnComprobante.TabIndex = 82;
+            this.btnComprobante.Text = "Comprobante de Pedido";
+            this.btnComprobante.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnComprobante.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnComprobante.UseVisualStyleBackColor = false;
+            this.btnComprobante.Click += new System.EventHandler(this.btnComprobante_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel10.Location = new System.Drawing.Point(910, 45);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(10, 49);
+            this.panel10.TabIndex = 81;
+            // 
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.White;
@@ -183,33 +214,12 @@
             this.btLimpiar2.IconColor = System.Drawing.Color.White;
             this.btLimpiar2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btLimpiar2.IconSize = 30;
-            this.btLimpiar2.Location = new System.Drawing.Point(1087, 143);
+            this.btLimpiar2.Location = new System.Drawing.Point(1003, 149);
             this.btLimpiar2.Name = "btLimpiar2";
             this.btLimpiar2.Size = new System.Drawing.Size(68, 45);
             this.btLimpiar2.TabIndex = 42;
             this.btLimpiar2.UseVisualStyleBackColor = false;
             this.btLimpiar2.Click += new System.EventHandler(this.btLimpiar2_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscar.IconColor = System.Drawing.Color.White;
-            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscar.IconSize = 30;
-            this.btnBuscar.Location = new System.Drawing.Point(1004, 143);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(68, 45);
-            this.btnBuscar.TabIndex = 41;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -222,6 +232,7 @@
             this.txtBuscar.Size = new System.Drawing.Size(193, 30);
             this.txtBuscar.TabIndex = 40;
             this.txtBuscar.Text = "Busca Aqui";
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
             this.txtBuscar.Leave += new System.EventHandler(this.txtBuscar_Leave);
             // 
@@ -271,39 +282,6 @@
             this.Titulo.TabIndex = 36;
             this.Titulo.Text = "Busqueda de Pedido\r\n";
             // 
-            // btnComprobante
-            // 
-            this.btnComprobante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnComprobante.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnComprobante.FlatAppearance.BorderSize = 0;
-            this.btnComprobante.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnComprobante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnComprobante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComprobante.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComprobante.ForeColor = System.Drawing.Color.LightGray;
-            this.btnComprobante.IconChar = FontAwesome.Sharp.IconChar.Download;
-            this.btnComprobante.IconColor = System.Drawing.Color.White;
-            this.btnComprobante.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnComprobante.IconSize = 30;
-            this.btnComprobante.Location = new System.Drawing.Point(920, 45);
-            this.btnComprobante.Name = "btnComprobante";
-            this.btnComprobante.Size = new System.Drawing.Size(250, 49);
-            this.btnComprobante.TabIndex = 82;
-            this.btnComprobante.Text = "Comprobante de Pedido";
-            this.btnComprobante.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnComprobante.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnComprobante.UseVisualStyleBackColor = false;
-            this.btnComprobante.Click += new System.EventHandler(this.btnComprobante_Click);
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel10.Location = new System.Drawing.Point(910, 45);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(10, 49);
-            this.panel10.TabIndex = 81;
-            // 
             // BucarPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -328,12 +306,13 @@
         private System.Windows.Forms.Panel pPrincipal;
         private System.Windows.Forms.PictureBox pictureBox9;
         private FontAwesome.Sharp.IconButton btLimpiar2;
-        private FontAwesome.Sharp.IconButton btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.ComboBox cboBusqueda;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblBuscarpor;
         private System.Windows.Forms.Label Titulo;
+        private FontAwesome.Sharp.IconButton btnComprobante;
+        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.DataGridView dgvPedidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProductoprove;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigpBarras;
@@ -342,7 +321,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrePro;
-        private FontAwesome.Sharp.IconButton btnComprobante;
-        private System.Windows.Forms.Panel panel10;
     }
 }

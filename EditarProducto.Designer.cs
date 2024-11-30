@@ -28,20 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnConcultar = new FontAwesome.Sharp.IconButton();
             this.calendario = new System.Windows.Forms.MonthCalendar();
-            this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.codigoBarras = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.existencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaCaducidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblFechaC = new System.Windows.Forms.Label();
             this.lblPrecioV = new System.Windows.Forms.Label();
             this.lblPrecioC = new System.Windows.Forms.Label();
@@ -70,8 +61,16 @@
             this.txtCodigoB = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Titulo = new System.Windows.Forms.Label();
+            this.fechaCaducidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.existencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoBarras = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -80,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -156,101 +156,6 @@
             this.calendario.TabIndex = 70;
             this.calendario.Visible = false;
             this.calendario.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendario_DateSelected);
-            // 
-            // dgvProductos
-            // 
-            this.dgvProductos.AllowUserToAddRows = false;
-            this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dgvProductos.ColumnHeadersHeight = 53;
-            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigoBarras,
-            this.nombre,
-            this.marca,
-            this.iva,
-            this.existencia,
-            this.precioCompra,
-            this.precioVenta,
-            this.fechaCaducidad});
-            this.dgvProductos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvProductos.EnableHeadersVisualStyles = false;
-            this.dgvProductos.GridColor = System.Drawing.Color.Gray;
-            this.dgvProductos.Location = new System.Drawing.Point(3, 508);
-            this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.RowHeadersVisible = false;
-            this.dgvProductos.RowHeadersWidth = 62;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvProductos.RowTemplate.Height = 28;
-            this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(1233, 330);
-            this.dgvProductos.TabIndex = 69;
-            this.dgvProductos.Visible = false;
-            this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
-            // 
-            // codigoBarras
-            // 
-            this.codigoBarras.HeaderText = "Codigo de Barras";
-            this.codigoBarras.MinimumWidth = 8;
-            this.codigoBarras.Name = "codigoBarras";
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.MinimumWidth = 8;
-            this.nombre.Name = "nombre";
-            // 
-            // marca
-            // 
-            this.marca.HeaderText = "Marca";
-            this.marca.MinimumWidth = 8;
-            this.marca.Name = "marca";
-            // 
-            // iva
-            // 
-            this.iva.HeaderText = "Iva";
-            this.iva.MinimumWidth = 8;
-            this.iva.Name = "iva";
-            // 
-            // existencia
-            // 
-            this.existencia.HeaderText = "Existencias";
-            this.existencia.MinimumWidth = 8;
-            this.existencia.Name = "existencia";
-            // 
-            // precioCompra
-            // 
-            this.precioCompra.HeaderText = "Precio de Compra";
-            this.precioCompra.MinimumWidth = 8;
-            this.precioCompra.Name = "precioCompra";
-            // 
-            // precioVenta
-            // 
-            this.precioVenta.HeaderText = "Precio de Venta";
-            this.precioVenta.MinimumWidth = 8;
-            this.precioVenta.Name = "precioVenta";
-            // 
-            // fechaCaducidad
-            // 
-            this.fechaCaducidad.HeaderText = "Fecha de Caducidad";
-            this.fechaCaducidad.MinimumWidth = 8;
-            this.fechaCaducidad.Name = "fechaCaducidad";
             // 
             // lblFechaC
             // 
@@ -421,7 +326,6 @@
             // 
             this.txtFechaV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtFechaV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFechaV.Enabled = false;
             this.txtFechaV.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFechaV.ForeColor = System.Drawing.Color.DimGray;
             this.txtFechaV.Location = new System.Drawing.Point(922, 237);
@@ -429,7 +333,10 @@
             this.txtFechaV.Size = new System.Drawing.Size(261, 30);
             this.txtFechaV.TabIndex = 55;
             this.txtFechaV.Text = "Fecha de Caducidad";
+            this.txtFechaV.Enter += new System.EventHandler(this.txtFechaV_Enter);
             this.txtFechaV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFechaV_KeyPress);
+            this.txtFechaV.Leave += new System.EventHandler(this.txtFechaV_Leave);
+            this.txtFechaV.MouseEnter += new System.EventHandler(this.txtFechaV_MouseEnter);
             // 
             // pictureBox8
             // 
@@ -617,6 +524,101 @@
             this.Titulo.TabIndex = 39;
             this.Titulo.Text = "Editar Productos";
             // 
+            // fechaCaducidad
+            // 
+            this.fechaCaducidad.HeaderText = "Fecha de Caducidad";
+            this.fechaCaducidad.MinimumWidth = 8;
+            this.fechaCaducidad.Name = "fechaCaducidad";
+            // 
+            // precioVenta
+            // 
+            this.precioVenta.HeaderText = "Precio de Venta";
+            this.precioVenta.MinimumWidth = 8;
+            this.precioVenta.Name = "precioVenta";
+            // 
+            // precioCompra
+            // 
+            this.precioCompra.HeaderText = "Precio de Compra";
+            this.precioCompra.MinimumWidth = 8;
+            this.precioCompra.Name = "precioCompra";
+            // 
+            // existencia
+            // 
+            this.existencia.HeaderText = "Existencias";
+            this.existencia.MinimumWidth = 8;
+            this.existencia.Name = "existencia";
+            // 
+            // iva
+            // 
+            this.iva.HeaderText = "Iva";
+            this.iva.MinimumWidth = 8;
+            this.iva.Name = "iva";
+            // 
+            // marca
+            // 
+            this.marca.HeaderText = "Marca";
+            this.marca.MinimumWidth = 8;
+            this.marca.Name = "marca";
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.MinimumWidth = 8;
+            this.nombre.Name = "nombre";
+            // 
+            // codigoBarras
+            // 
+            this.codigoBarras.HeaderText = "Codigo de Barras";
+            this.codigoBarras.MinimumWidth = 8;
+            this.codigoBarras.Name = "codigoBarras";
+            // 
+            // dgvProductos
+            // 
+            this.dgvProductos.AllowUserToAddRows = false;
+            this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProductos.ColumnHeadersHeight = 53;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoBarras,
+            this.nombre,
+            this.marca,
+            this.iva,
+            this.existencia,
+            this.precioCompra,
+            this.precioVenta,
+            this.fechaCaducidad});
+            this.dgvProductos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvProductos.EnableHeadersVisualStyles = false;
+            this.dgvProductos.GridColor = System.Drawing.Color.Gray;
+            this.dgvProductos.Location = new System.Drawing.Point(3, 508);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.RowHeadersVisible = false;
+            this.dgvProductos.RowHeadersWidth = 62;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProductos.RowTemplate.Height = 28;
+            this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProductos.Size = new System.Drawing.Size(1233, 330);
+            this.dgvProductos.TabIndex = 69;
+            this.dgvProductos.Visible = false;
+            this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
+            // 
             // EditarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -631,7 +633,6 @@
             this.Load += new System.EventHandler(this.EditarProducto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -640,6 +641,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -675,6 +677,8 @@
         private System.Windows.Forms.TextBox txtCodigoB;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Titulo;
+        private System.Windows.Forms.MonthCalendar calendario;
+        private FontAwesome.Sharp.IconButton btnConcultar;
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoBarras;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
@@ -684,7 +688,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precioCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaCaducidad;
-        private System.Windows.Forms.MonthCalendar calendario;
-        private FontAwesome.Sharp.IconButton btnConcultar;
     }
 }

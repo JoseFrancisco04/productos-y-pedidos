@@ -44,7 +44,6 @@
             this.fechaCaducidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.btLimpiar2 = new FontAwesome.Sharp.IconButton();
-            this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.cboBusqueda = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,7 +62,6 @@
             this.pprincipal.Controls.Add(this.dgvProductos);
             this.pprincipal.Controls.Add(this.pictureBox9);
             this.pprincipal.Controls.Add(this.btLimpiar2);
-            this.pprincipal.Controls.Add(this.btnBuscar);
             this.pprincipal.Controls.Add(this.txtBuscar);
             this.pprincipal.Controls.Add(this.cboBusqueda);
             this.pprincipal.Controls.Add(this.label2);
@@ -97,6 +95,7 @@
             this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // panel9
             // 
@@ -232,33 +231,12 @@
             this.btLimpiar2.IconColor = System.Drawing.Color.White;
             this.btLimpiar2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btLimpiar2.IconSize = 30;
-            this.btLimpiar2.Location = new System.Drawing.Point(1108, 155);
+            this.btLimpiar2.Location = new System.Drawing.Point(1029, 158);
             this.btLimpiar2.Name = "btLimpiar2";
             this.btLimpiar2.Size = new System.Drawing.Size(68, 45);
             this.btLimpiar2.TabIndex = 34;
             this.btLimpiar2.UseVisualStyleBackColor = false;
             this.btLimpiar2.Click += new System.EventHandler(this.btLimpiar2_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscar.IconColor = System.Drawing.Color.White;
-            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscar.IconSize = 30;
-            this.btnBuscar.Location = new System.Drawing.Point(1025, 155);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(68, 45);
-            this.btnBuscar.TabIndex = 33;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -271,7 +249,7 @@
             this.txtBuscar.Size = new System.Drawing.Size(193, 30);
             this.txtBuscar.TabIndex = 32;
             this.txtBuscar.Text = "Busca Aqui";
-            this.txtBuscar.ModifiedChanged += new System.EventHandler(this.txtBuscar_ModifiedChanged);
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
             this.txtBuscar.Leave += new System.EventHandler(this.txtBuscar_Leave);
             // 
@@ -346,7 +324,6 @@
         private System.Windows.Forms.Label Titulo;
         private System.Windows.Forms.PictureBox pictureBox9;
         private FontAwesome.Sharp.IconButton btLimpiar2;
-        private FontAwesome.Sharp.IconButton btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.ComboBox cboBusqueda;
         private System.Windows.Forms.Label label2;

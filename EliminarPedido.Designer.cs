@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtFechap = new System.Windows.Forms.TextBox();
             this.lblnumPe = new System.Windows.Forms.Label();
             this.txtnumPe = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -59,7 +60,6 @@
             this.txtCodigoB = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Titulo = new System.Windows.Forms.Label();
-            this.txtFechap = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
@@ -97,8 +97,24 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1211, 782);
+            this.panel1.Size = new System.Drawing.Size(1239, 838);
             this.panel1.TabIndex = 0;
+            // 
+            // txtFechap
+            // 
+            this.txtFechap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtFechap.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFechap.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechap.ForeColor = System.Drawing.Color.DimGray;
+            this.txtFechap.Location = new System.Drawing.Point(629, 215);
+            this.txtFechap.Name = "txtFechap";
+            this.txtFechap.Size = new System.Drawing.Size(232, 30);
+            this.txtFechap.TabIndex = 87;
+            this.txtFechap.Text = "Fecha de Pedido";
+            this.txtFechap.Enter += new System.EventHandler(this.txtFechap_Enter);
+            this.txtFechap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFechap_KeyPress);
+            this.txtFechap.Leave += new System.EventHandler(this.txtFechap_Leave);
+            this.txtFechap.MouseEnter += new System.EventHandler(this.txtFechap_MouseEnter);
             // 
             // lblnumPe
             // 
@@ -124,6 +140,7 @@
             this.txtnumPe.TabIndex = 80;
             this.txtnumPe.Text = "Número de Pedido";
             this.txtnumPe.Enter += new System.EventHandler(this.txtnumPe_Enter);
+            this.txtnumPe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnumPe_KeyPress);
             this.txtnumPe.Leave += new System.EventHandler(this.txtnumPe_Leave);
             // 
             // pictureBox3
@@ -223,14 +240,14 @@
             this.dgvPedidos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.dgvPedidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPedidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPedidos.ColumnHeadersHeight = 53;
             this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -244,19 +261,19 @@
             this.dgvPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvPedidos.EnableHeadersVisualStyles = false;
             this.dgvPedidos.GridColor = System.Drawing.Color.Gray;
-            this.dgvPedidos.Location = new System.Drawing.Point(3, 472);
+            this.dgvPedidos.Location = new System.Drawing.Point(19, 472);
             this.dgvPedidos.Name = "dgvPedidos";
             this.dgvPedidos.RowHeadersVisible = false;
             this.dgvPedidos.RowHeadersWidth = 62;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvPedidos.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvPedidos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPedidos.RowTemplate.Height = 28;
             this.dgvPedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPedidos.Size = new System.Drawing.Size(1208, 307);
+            this.dgvPedidos.Size = new System.Drawing.Size(1208, 354);
             this.dgvPedidos.TabIndex = 79;
             this.dgvPedidos.Visible = false;
             this.dgvPedidos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedidos_CellClick);
@@ -393,6 +410,7 @@
             this.txtCantidadP.TabIndex = 70;
             this.txtCantidadP.Text = "Cantidad de Producto";
             this.txtCantidadP.Enter += new System.EventHandler(this.txtCantidadP_Enter);
+            this.txtCantidadP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidadP_KeyPress);
             this.txtCantidadP.Leave += new System.EventHandler(this.txtCantidadP_Leave);
             // 
             // pictureBox4
@@ -416,6 +434,7 @@
             this.txtNumpro.TabIndex = 68;
             this.txtNumpro.Text = "Número de Proveedor";
             this.txtNumpro.Enter += new System.EventHandler(this.txtNumpro_Enter);
+            this.txtNumpro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumpro_KeyPress);
             this.txtNumpro.Leave += new System.EventHandler(this.txtNumpro_Leave);
             // 
             // pictureBox2
@@ -439,6 +458,7 @@
             this.txtCodigoB.TabIndex = 73;
             this.txtCodigoB.Text = "Codigo de Barras";
             this.txtCodigoB.Enter += new System.EventHandler(this.txtCodigoB_Enter);
+            this.txtCodigoB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoB_KeyPress);
             this.txtCodigoB.Leave += new System.EventHandler(this.txtCodigoB_Leave);
             // 
             // pictureBox1
@@ -461,26 +481,11 @@
             this.Titulo.TabIndex = 65;
             this.Titulo.Text = "Eliminar Pedidos";
             // 
-            // txtFechap
-            // 
-            this.txtFechap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.txtFechap.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFechap.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFechap.ForeColor = System.Drawing.Color.DimGray;
-            this.txtFechap.Location = new System.Drawing.Point(629, 215);
-            this.txtFechap.Name = "txtFechap";
-            this.txtFechap.Size = new System.Drawing.Size(232, 30);
-            this.txtFechap.TabIndex = 87;
-            this.txtFechap.Text = "Fecha de Pedido";
-            this.txtFechap.Enter += new System.EventHandler(this.txtFechap_Enter);
-            this.txtFechap.Leave += new System.EventHandler(this.txtFechap_Leave);
-            this.txtFechap.MouseEnter += new System.EventHandler(this.txtFechap_MouseEnter);
-            // 
             // EliminarPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1211, 782);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(1239, 838);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EliminarPedido";

@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using ClosedXML.Excel;
+using System.IO;
+
 namespace LoginCRUMAR
 {
     public partial class BudquedaProduto : Form
@@ -59,7 +62,7 @@ namespace LoginCRUMAR
             }
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void buscarP(object sender, EventArgs e)
         {
             try
             {
@@ -111,6 +114,7 @@ namespace LoginCRUMAR
             {
                 txtBuscar.Text = "";
                 txtBuscar.ForeColor = Color.LightGray;
+              
 
             }
 
@@ -122,13 +126,82 @@ namespace LoginCRUMAR
             {
                 txtBuscar.Text = "Busca Aqui";
                 txtBuscar.ForeColor = Color.DimGray;
-
+                CargarProductos();
             }
         }
 
-        private void txtBuscar_ModifiedChanged(object sender, EventArgs e)
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            btnBuscar_Click(sender, e);
+            buscarP(sender, e);
         }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Archivos de Excel (*.xlsx)|*.xlsx";
+                saveFileDialog.Title = "Guardar como";
+                saveFileDialog.FileName = "Productos.xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string rutaArchivo = saveFileDialog.FileName;
+                    ExportarAExcel(dgvProductos, rutaArchivo);
+                }
+            }
+
+        }
+
+        private void ExportarAExcel(DataGridView dataGridView, string rutaArchivo)
+        {
+            try
+            {
+                // Validar que el DataGridView tenga filas
+                if (dataGridView.Rows.Count == 0)
+                {
+                    MessageBox.Show("No hay datos para exportar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Crear un nuevo libro de Excel
+                using (var workbook = new XLWorkbook())
+                {
+                    // Agregar una hoja de cálculo
+                    var worksheet = workbook.Worksheets.Add("Datos");
+
+                    // Escribir encabezados de las columnas
+                    for (int col = 0; col < dataGridView.Columns.Count; col++)
+                    {
+                        worksheet.Cell(1, col + 1).Value = dataGridView.Columns[col].HeaderText;
+                    }
+
+                    // Escribir datos de las filas
+                    for (int row = 0; row < dataGridView.Rows.Count; row++)
+                    {
+                        for (int col = 0; col < dataGridView.Columns.Count; col++)
+                        {
+                            // Obtener el valor de la celda
+                            var value = dataGridView.Rows[row].Cells[col].Value;
+
+                            // Validar y convertir el valor antes de asignarlo a la celda de Excel
+                            worksheet.Cell(row + 2, col + 1).Value = value != null ? value.ToString() : string.Empty;
+                        }
+                    }
+
+                    // Guardar el archivo en la ruta especificada
+                    workbook.SaveAs(rutaArchivo);
+                }
+
+                MessageBox.Show("Archivo Excel generado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                // Mostrar cualquier error que ocurra
+                MessageBox.Show($"Ocurrió un error al exportar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }
+
+

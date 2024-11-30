@@ -15,7 +15,7 @@ namespace LoginCRUMAR
         {
 
         }
-        static string cadena = @"Data Source=localhost\SQLExpress;Initial Catalog=db_CRUMARP;Integrated Security=True";
+        static string cadena = @"Data Source=localhost\SQLExpress;Initial Catalog=CRUMARpv;Integrated Security=True";
 
         public SqlConnection conexion = new SqlConnection(cadena);
 

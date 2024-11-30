@@ -14,6 +14,7 @@ namespace LoginCRUMAR
     {
         ConexionProductos coBD = new ConexionProductos();
         private ToolTip toolTip;
+        SoloNumyFech nf = new SoloNumyFech();
         public EliminarPedido()
         {
             InitializeComponent();
@@ -310,6 +311,33 @@ namespace LoginCRUMAR
         {
             
             toolTip.SetToolTip(txtFechap, "dd/MM/yyyy");
+        }
+
+        private void txtnumPe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            nf.solonum(sender, e);
+        }
+
+        private void txtNumpro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            nf.solonum(sender, e);
+        }
+
+        private void txtCodigoB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            nf.solonum(sender, e);
+
+        }
+
+        private void txtCantidadP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            nf.solonum(sender, e);
+        }
+
+        private void txtFechap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            nf.solonum(sender, e);
         }
     }
 }

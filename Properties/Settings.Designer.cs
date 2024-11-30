@@ -44,5 +44,16 @@ namespace LoginCRUMAR.Properties {
                 return ((string)(this["db_CRUMARPConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\SQLExpress;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            "e;Encrypt=False")]
+        public string CRUMARpvConnectionString {
+            get {
+                return ((string)(this["CRUMARpvConnectionString"]));
+            }
+        }
     }
 }

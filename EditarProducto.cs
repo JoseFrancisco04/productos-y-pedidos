@@ -14,6 +14,7 @@ namespace LoginCRUMAR
     {
         ConexionProductos coBD = new ConexionProductos();
         SoloNumyFech nf = new SoloNumyFech();
+        private ToolTip toolTip;
 
         public EditarProducto()
         {
@@ -127,6 +128,11 @@ namespace LoginCRUMAR
         private void EditarProducto_Load(object sender, EventArgs e)
         {
             CargarProductos();
+            toolTip = new ToolTip();
+            toolTip.ShowAlways = true;
+            toolTip.AutoPopDelay = 5000;
+            toolTip.InitialDelay = 0;
+            toolTip.ReshowDelay = 0;
         }
 
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -410,6 +416,33 @@ namespace LoginCRUMAR
         private void txtFechaV_KeyPress(object sender, KeyPressEventArgs e)
         {
             nf.soloFecha(sender, e);
+        }
+
+        private void txtFechaV_Enter(object sender, EventArgs e)
+        {
+            if (txtFechaV.Text == "Fecha de Caducidad")
+            {
+                txtFechaV.Text = "";
+                txtFechaV.ForeColor = Color.LightGray;
+                lblFechaC.Visible = true;
+
+            }
+        }
+
+        private void txtFechaV_Leave(object sender, EventArgs e)
+        {
+            if (txtFechaV.Text == "")
+            {
+                txtFechaV.Text = "Fecha de Caducidad";
+                txtFechaV.ForeColor = Color.DimGray;
+                lblFechaC.Visible = false;
+
+            }
+        }
+
+        private void txtFechaV_MouseEnter(object sender, EventArgs e)
+        {
+            toolTip.SetToolTip(txtFechaV, "dd/MM/yyyy");
         }
     }
 }
